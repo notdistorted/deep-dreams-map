@@ -12,11 +12,9 @@ fetch('./data/dataset.json')
 
 		const Graph = ForceGraph()(graphElement)
 			.nodeCanvasObject(({ image, x, y }, ctx) => {
-        		const size = 12;
         		ctx.drawImage(image, x - nodeDimensions.width / 2, y - nodeDimensions.height / 2, nodeDimensions.width, nodeDimensions.height);
       		})
       		.nodePointerAreaPaint((node, color, ctx) => {
-        		const size = 12;
         		ctx.fillStyle = color;
         		ctx.fillRect(node.x - nodeDimensions.width / 2, node.y - nodeDimensions.height / 2, nodeDimensions.width, nodeDimensions.height);
       		})
@@ -26,4 +24,3 @@ fetch('./data/dataset.json')
 			.nodeId('worldId')
 		;
 	});
-	
